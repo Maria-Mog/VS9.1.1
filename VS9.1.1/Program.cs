@@ -22,24 +22,24 @@ namespace VS9._1._1
                 {
                     throw new ArgumentException("Нет операции с указанным номером");
                 }
-                    
-                int rezult = 0;
+
+                double rezult = 0;
                 if (z == 1)
                 {
-                    rezult = (x + y);
+                    rezult = x + y;
                 }
                 if (z == 2)
                 {
-                    rezult = (x - y);
+                    rezult = x - y;
 
                 }
                 if (z == 3)
                 {
-                    rezult = (x * y);
+                    rezult = x * y;
                 }
                 if (z == 4)
                 {
-                    rezult = (x / y);
+                    rezult = ((double)x) / y;
                 }
 
                 Console.Write("Результат = {0}", rezult);
@@ -47,7 +47,7 @@ namespace VS9._1._1
             catch (FormatException ex)
             {
                 Console.WriteLine("Ошибка! {0}", ex.Message);
-            }            
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
